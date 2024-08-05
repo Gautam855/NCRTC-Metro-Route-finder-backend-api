@@ -62,8 +62,8 @@ app.post("/findRoute", (req, res) => {
 
     const { source, destination } = req.body;
 
-    console.log("Source:", source);
-    console.log("Destination:", destination);
+    console.log("Source:", source.toUpperCase());
+    console.log("Destination:", destination.toUpperCase());
 
     const result = findIntermediateStations(source.toUpperCase(), destination.toUpperCase());
 
