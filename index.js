@@ -14,8 +14,7 @@ app.use(bodyParser.json());
 function findIntermediateStations(source, destination) {
   const lowercaseSource = source ? source.toUpperCase() : "";
   const lowercaseDestination = destination ? destination.toUpperCase() : "";
- console.log("Source2:", lowercaseSource);
-    console.log("Destination2:", lowercaseDestination);
+
   // Check if source is equal to destination
   if (lowercaseSource === lowercaseDestination) {
     return {
@@ -30,8 +29,7 @@ function findIntermediateStations(source, destination) {
   const destinationIndex = stations.findIndex((station) =>
     station.value ? station.value.toUpperCase() === lowercaseDestination : false
   );
- console.log("Sourceindex2:", sourceIndex);
-    console.log("Destinationindex2:", destinationIndex);
+
   if (sourceIndex === -1 || destinationIndex === -1) {
     return { error: "Invalid source or destination" };
   }
@@ -64,8 +62,8 @@ app.post("/findRoute", (req, res) => {
 
     const { source, destination } = req.body;
 
-    console.log("Source1:", source.toUpperCase());
-    console.log("Destination1:", destination.toUpperCase());
+    console.log("Source:", source);
+    console.log("Destination:", destination);
 
     const result = findIntermediateStations(source.toUpperCase(), destination.toUpperCase());
 
