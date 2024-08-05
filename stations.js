@@ -7,6 +7,7 @@ const stations = [
     { "value": "GHAZIABAD" },
     { "value": "GULDHAR" },
     { "value": "DUHAI" },
+     { "value": "Duhai Depot" },
     { "value": "MURAD NAGAR" },
     { "value": "MODINAGAR SOUTH" },
     { "value": "MODINAGAR NORTH" },
